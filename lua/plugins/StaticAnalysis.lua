@@ -31,11 +31,6 @@ return {
 					navic.attach(client, bufnr)
 				end
 			}
-			require'lspconfig'.texlab.setup{
-				on_attach = function(client, bufnr)
-					navic.attach(client, bufnr)
-				end
-			}
 			require'lspconfig'.grammarly.setup{
 				autostart = false,
 				filetypes = {'latex', 'tex', 'markdown'},
@@ -51,37 +46,37 @@ return {
 		dependencies = { "neovim/nvim-lspconfig" },
 		opts = {
 			icons = {
-        File          = " ",
-        Module        = " ",
-        Namespace     = " ",
-        Package       = " ",
-        Class         = " ",
-        Method        = " ",
-        Property      = " ",
-        Field         = " ",
-        Constructor   = " ",
-        Enum          = "練",
-        Interface     = "練",
-        Function      = " ",
-        Variable      = " ",
-        Constant      = " ",
-        String        = " ",
-        Number        = " ",
-        Boolean       = "◩ ",
-        Array         = " ",
-        Object        = " ",
-        Key           = " ",
-        Null          = "ﳠ ",
-        EnumMember    = " ",
-        Struct        = " ",
-        Event         = " ",
-        Operator      = " ",
-        TypeParameter = " ",
+        File          = "₣ ",
+        Module        = "£ ",
+        Namespace     = "η ",
+        Package       = "P ",
+        Class         = "C ",
+        Method        = "M ",
+        Property      = "Þ ",
+        Field         = "Џ ",
+        Constructor   = "-|",
+        Enum          = "",
+        Interface     = "",
+        Function      = "ƒ ",
+        Variable      = "v ",
+        Constant      = "c ",
+        String        = "s ",
+        Number        = "n ",
+        Boolean       = "b ",
+        Array         = "a ",
+        Object        = "o ",
+        Key           = " ",
+        Null          = "∅ ",
+        EnumMember    = "ε ",
+        Struct        = "◯ ",
+        Event         = "⇉ ",
+        Operator      = "‼ ",
+        TypeParameter = "λ ",
     },
     highlight = false,
-    separator = "  ",
+    separator = " > ",
     depth_limit = 5,
-    depth_limit_indicator = "",
+    depth_limit_indicator = "∑",
     safe_output = true
 		},
 		config = function (_,opts)

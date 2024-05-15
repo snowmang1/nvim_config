@@ -94,7 +94,7 @@ return {
     icons_enabled = true,
     theme = Catpuccin,
     component_separators = {},
-		section_separators = { left = '', right = '' },
+		section_separators = { left = '', right = '' },
     disabled_filetypes = {
       statusline = {},
       winbar = {},
@@ -110,9 +110,13 @@ return {
 		},
 		sections = {
 			lualine_a = {
-				{ 'mode', separator = { left = '', right = '' }, right_padding = 2 },
+				{ 'mode', separator = { left = '', right = '' }, right_padding = 2 },
 			},
-			lualine_b = {'branch', 'diff', 'diagnostics'},
+			lualine_b = {
+				'branch',
+				'diff',
+				'diagnostics'
+			},
 			lualine_c = {
 				{
 					function()
@@ -126,7 +130,11 @@ return {
 				},
 			},
 			lualine_x = {},
-			lualine_y = {{'encoding', color = {fg = colors.sky}}, {'filetype', color = {fg = colors.sky}}, 'progress'},
+			lualine_y = {
+				{'encoding', color = {fg = colors.sky}},
+				{'filetype', icons_enabled = false, color = {fg = colors.sky}},
+				'progress'
+			},
 			lualine_z = {'location'}
 		},
 		inactive_sections = {
@@ -169,7 +177,7 @@ return {
 				end
 				return msg
 			end,
-			icon = ' LSP:',
+			icon = '§ LSP:',
 			color = { fg = colors.lavender, gui = 'bold' },
 		}
 

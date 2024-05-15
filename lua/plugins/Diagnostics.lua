@@ -8,13 +8,13 @@ return {
 		opts = {
 			signs = {
 				add = { text = "▎" },
-        change = { text = "▎" },
-        delete = { text = "" },
-        topdelete = { text = "" },
+        change = { text = "" },
+        delete = { text = "󰺝" },
+        topdelete = { text = "▎" },
         changedelete = { text = "▎" },
         untracked = { text = "▎" },
       },
-			cusigncolumn = false,  -- Toggle with `:Gitsigns toggle_signs`
+			-- cusigncolumn = false,  -- Toggle with `:Gitsigns toggle_signs`
 			numhl      = true, -- Toggle with `:Gitsigns toggle_numhl`
 			linehl     = false, -- Toggle with `:Gitsigns toggle_linehl`
 			word_diff  = false, -- Toggle with `:Gitsigns toggle_word_diff`rrent_line_blame_opts = {
@@ -62,11 +62,11 @@ return {
 						alt = { "FIXME", "BUG", "FIXIT", "ISSUE" }, -- a set of other keywords that all map to this FIX keywords
 						-- signs = false, -- configure signs for some keywords individually
 					},
-					TODO = { icon = " ", color = "info" },
-					HACK = { icon = " ", color = "warning" },
-					WARN = { icon = " ", color = "warning", alt = { "WARNING", "XXX" } },
-					PERF = { icon = " ", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
-					NOTE = { icon = " ", color = "hint", alt = { "INFO" } },
+					TODO = { icon = " ", color = "info" },
+					HACK = { icon = " ", color = "warning" },
+					WARN = { icon = " ", color = "warning", alt = { "WARNING", "XXX" } },
+					PERF = { icon = " ", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
+					NOTE = { icon = " ", color = "hint", alt = { "INFO" } },
 					TEST = { icon = "⏲ ", color = "test", alt = { "TESTING", "PASSED", "FAILED" } },
 				},
 				gui_style = {
