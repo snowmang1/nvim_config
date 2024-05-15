@@ -49,19 +49,19 @@ return {
 				-- we try to get the foreground from the highlight groups or fallback color
 				color = { "Normal", "#ffffff" },
 				term_bg = "#000000", -- if guibg=NONE, this will be used to calculate text color
-				inactive = false, -- when true, other windows will be fully dimmed (unless they contain the same buffer)
+				inactive = true, -- when true, other windows will be fully dimmed (unless they contain the same buffer)
 			},
-			context = 10, -- amount of lines we will try to show around the current line
-			treesitter = true, -- use treesitter when available for the filetype
+			context = 5, -- amount of lines we will try to show around the current line
+			treesitter = false, -- use treesitter when available for the filetype
 			-- treesitter is used to automatically expand the visible text,
 			-- but you can further control the types of nodes that should always be fully expanded
 			expand = { -- for treesitter, we we always try to expand to the top-most ancestor with these types
-				"function",
-				"method",
-				"table",
-				"if_statement",
+				-- "function",
+				-- "method",
+				-- "table",
+				-- "if_statement",
 			},
-			exclude = {"tex", "latex", "text"}, -- exclude these filetypes
+			exclude = {}, -- exclude these filetypes
 		}
 	},
 
@@ -96,7 +96,7 @@ return {
 				-- disable some global vim options (vim.o...)
 				-- comment the lines to not apply the options
 				options = {
-					enabled = true,
+					enabled = false,
 					ruler = false, -- disables the ruler text in the cmd line area
 					showcmd = false, -- disables the command in the last line of the screen
 				},
@@ -104,12 +104,19 @@ return {
 				gitsigns = { enabled = false }, -- disables git signs
 				tmux = { enabled = false }, -- disables the tmux statusline
 				lualine = { enabled = false }, -- disables lualine
-				navic = { enabled = false }
+				navic = { enabled = false },
+				vimtex = { enabled = false },
 			},
 			-- callback where you can add custom code when the Zen window closes
 			-- on_close = function()
 			-- end,
 		}
-	}
+	},
+
+	{
+		'lervag/vimtex',
+		lazy = true,
+		ft = {'latex', 'tex'},
+	},
 
 }
